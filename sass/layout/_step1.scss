@@ -1,0 +1,99 @@
+@import '../libs/_vars';
+@import '../libs/_functions';
+@import '../libs/_mixins';
+
+	.info-nav{
+		 ul {
+			 list-style: none;
+			 margin: 0;
+			 padding-left: 0em;
+			 width: 100%;
+			 display: block;
+			 border-bottom: solid _size(border-width)*2 _palette(normalPink);
+			 box-shadow: 0 0.1em 0 0 _palette(shadow);
+			 @include clearfix;
+
+			 li {
+				 width: calc(100%/3- 2em);
+				 background-color: _palette(bg-gray);
+				 @include textCenter;
+				 @include floatLeft;
+				 margin-right:1px;
+				 padding: 0.5em;
+			 }
+				 & .current{
+				 background-color: _palette(normalPink) ;
+				 color:_palette(bg);
+			 }
+		 }
+
+	 }
+
+	.info-Cart{
+		background-color: _palette(bg-gray);
+		padding: 0.8em;
+	}
+
+	.info-detail{
+		padding: 0.5em 0;
+
+		& .product_photo{
+			@include floatLeft;
+			img {
+				display: block;
+				margin: 0em auto;
+				width: 7.5em;
+				height:7.5em;
+			}
+		}
+
+		& .product_name{
+			@include floatLeft;
+			width: calc(100% - 7.5em);
+			padding: 0 0.5em;
+			height:7.4em;
+			overflow: hidden;
+
+		}
+	}
+
+	.dColor, .dStyle, .dQuantity{
+		width: calc(100% * 1/3 - 0.2em);
+		@include floatLeft;
+		margin-right: _size(element-margin)*0.3;
+	}
+
+	.dQuantity{
+		@include floatRight;
+		margin-right: 0;
+	}
+
+	.dPriceSelect{
+		color:_palette(text-red);
+		font-weight:_font(text-bold);
+	}
+
+
+
+.select-wrapper {
+	@include icon('\f078');
+	display: block;
+	position: relative;
+
+	&:before {
+		color: _palette(normalPink);
+		display: block;
+		height: _size(element-height);
+		line-height: _size(element-height);
+		pointer-events: none;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 0;
+		width: _size(element-height);
+	}
+
+	select::-ms-expand {
+		display: none;
+	}
+}

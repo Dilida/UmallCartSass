@@ -1,0 +1,129 @@
+@import '../libs/_vars';
+@import '../libs/_functions';
+@import '../libs/_mixins';
+
+///
+/// Identity by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		@include vendor('appearance', 'none');
+		@include vendor('transition', (
+			'background-color #{_duration(transition)} ease-in-out',
+			'border-color #{_duration(transition)} ease-in-out',
+			'color #{_duration(transition)} ease-in-out'
+		));
+		@include vendor('box-shadow','inset 0px 1px 0px 0px #ffffff');
+		@include linear-gradient(to top,  #dfdfdf 100%,#ededed 5%);
+		text-shadow: 0px 1px 0px #ffffff;
+		display: inline-block;
+		height: (_size(element-height)-0.8em);
+		line-height: (_size(element-height)-1em);
+		padding: 0 1.5em;
+		border: solid 1px _palette(border);
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+
+		&:hover {
+			color: _palette(normalPink) !important;
+		}
+
+		&.icon {
+			padding-left: 1.35em;
+
+			&:before {
+				margin-right: 0.5em;
+			}
+		}
+
+		&.fit {
+			display: block;
+			width: 100%;
+			margin: 0 0 (_size(element-margin) * 0.5) 0;
+		}
+
+		&.small {
+			font-size: 0.8em;
+		}
+
+		&.big {
+			font-size: 1.35em;
+		}
+
+		&.disabled,
+		&:disabled {
+			@include vendor('pointer-events', 'none');
+			opacity: 0.5;
+		}
+	}
+
+.special{
+	display: inline-block;
+	padding: 0 0.2em;
+	background-color: _palette(normalPink);
+	color: _palette(bg) !important;
+	height: (_size(element-height)-0.8em);
+	line-height: (_size(element-height)-1em);
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	border-radius: _size(border-radius)*0.5;
+
+}
+
+.checkOut{
+	display: inline-block;
+	padding: 0 0.2em;
+	color: _palette(bg) !important;
+	height: (_size(element-height)-0.8em);
+	line-height: (_size(element-height)-1em);
+	width: 100%;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	font-size: 1.25em;
+	border: solid 1px #222;
+	border-radius: _size(border-radius)*0.5;
+	@include linear-gradient(to top, #4e4d4b,#3d3c3a);
+	@include vendor('box-shadow','inset #ffffff 0 1px 1px -1px;');
+
+	&:hover {
+		background-color: _palette(shadow);
+
+	}
+}
+
+.continueButton{
+	display: inline-block;
+	padding: 0 0.2em;
+	color: _palette(bg) !important;
+	height: (_size(element-height)-0.8em);
+	line-height: (_size(element-height)-1em);
+	width: 100%;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	font-size: 1.25em;
+	border: solid 1px #FF5854;
+	border-radius: _size(border-radius)*0.5;
+	@include linear-gradient(to top, #FF5854,#FF9493);
+	@include vendor('box-shadow','inset #ffffff 0 1px 1px -1px;');
+
+	&:hover {
+		background-color: _palette(shadow);
+
+	}
+}

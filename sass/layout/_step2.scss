@@ -1,0 +1,190 @@
+@import '../libs/_vars';
+@import '../libs/_functions';
+@import '../libs/_mixins';
+
+	.info-nav{
+		 ul {
+			 list-style: none;
+			 margin: 0;
+			 padding-left: 0em;
+			 width: 100%;
+			 display: block;
+			 border-bottom: solid _size(border-width)*2 _palette(normalPink);
+			 box-shadow: 0 0.1em 0 0 _palette(shadow);
+			 @include clearfix;
+
+			 li {
+				 width: calc(100%/3-2em);
+				 background-color: _palette(bg-gray);
+				 @include textCenter;
+				 @include floatLeft;
+				 margin-right:1px;
+				 padding: 0.5em;
+			 }
+			 & .current{
+				 background-color: _palette(normalPink) ;
+				 color: #ffffff;;
+			 }
+		 }
+
+	 }
+
+	.info-Cart{
+		background-color: _palette(bg-gray);
+		padding: 0.8em;
+
+		a{
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		span{
+			@include padding(0em, 0.3em);
+
+		}
+
+	}
+
+	.info-detail{
+		padding: 0.5em 0;
+
+		& .product_title{
+			line-height: 1.3;
+            padding-bottom: _size(element-margin)*0.5;
+		}
+
+		& .product_photo{
+			@include floatLeft;
+			img {
+				display: block;
+				margin: 0em auto;
+				width: 7.5em;
+				height:7.5em;
+			}
+		}
+
+		& .product_name{
+			@include floatLeft;
+			width: calc(100% - 7.5em);
+			padding: 0 0.5em;
+			min-height:7.4em;
+
+		}
+	}
+
+.item-wrap_title{
+  font-size: _size(element-margin)*1.2;
+  font-weight: bold;
+  line-height: 1.5;
+  background-color: lighten(_palette(normalPink),20%);
+  & ins{
+    display: block;
+    width: 0.2em;
+    height: 23px;
+    float: left;
+    margin-right: 0.3em;
+    border-radius: _size(border-radius);
+    background-color: _palette(text-red);
+  }
+}
+
+.selectInvoice, .paymentItem, ._creditDateSelect{
+  @include icon('\f078');
+  display: block;
+  position: relative;
+
+
+  &:before {
+    color: _palette(normalPink);
+    display: block;
+    height: _size(element-height);
+    line-height: _size(element-height);
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: _size(element-height);
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+}
+
+.creditDate{
+  @include floatLeft;
+  @include clearfix;
+  margin-right: _size(element-margin);
+  & .orderInfo_left, .orderInfo_right{
+    float:left;
+    padding: 0.2em;
+  }
+
+  select{
+    width: _size(element-height)*2;
+    margin:0em 0.2em;
+    display: block;
+  }
+
+  & .creditThree input{
+    width: _size(element-height)*2.8;
+  }
+
+}
+
+.orderInfo, .orderAddressInfo{
+  @include clearfix;
+  & .orderInfo_left, .orderInfo_right, .orderAddressInfo_left, .orderAddressInfo_right{
+    float:left;
+    padding: 0.2em 0;
+  }
+
+  & .orderInfo_left{
+    width: _size(element-height)+1.8em;
+  }
+
+  & .orderAddressInfo_left{
+    width: _size(element-height)*2.5;
+    margin-right: _size(element-margin);
+  }
+}
+
+.orderAddress{
+  margin-top: _size(element-margin);
+}
+
+.orderAddressInfo{
+  margin-top: _size(element-margin)*0.3;
+}
+
+.giftCardSurface{
+  width:100%;
+}
+
+.paymentItemBlock{
+  margin-top: _size(element-margin);
+
+  & ._creditNumber input {
+    width: calc(100%/4.5);
+    @include floatLeft;
+    margin:0em 0.2em;
+  }
+
+}
+
+.cvsChoice{
+  ul{
+    li{
+      border: 1px solid _palette(normalPink);
+      width: calc(100%*0.45);
+      color: darken(_palette(normalPink),15%);
+      font-weight: bold;
+      margin-right:_size(element-margin);
+      @include linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+      @include floatLeft;
+      height: _size(element-height)+1em;
+      border-radius: 4px;
+      @include textCenter;
+    }
+  }
+}

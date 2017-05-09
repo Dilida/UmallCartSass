@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+// Misc.
+$misc: (
+        z-index-base: 10000
+);
+
+// Duration.
+$duration: (
+        transition: 0.2s,
+        bg: 1.75s,
+        main: 1s
+);
+
+// Size.
+$size: (
+        border-radius: 4px,
+        border-width: 1px,
+        element-height: 2.75em,
+        element-margin: 1.00em,
+        letter-spacing: 0.05em
+);
+
+// Font.
+$font: (
+        family: (Verdana, "微軟正黑體", "新細明體-ExtB"),
+        family-fixed: ('Courier New', monospace),
+        weight: 500,
+        text-bold:bold
+);
+
+// Palette.
+$palette: (
+        bg: #ffffff,
+        bg-alt: #f7f7f7,
+        normalPink: #FF9493,
+        bg-gray: #EEEBEB,
+        text-red: #f01400,
+        border: #c8cccf,
+        shadow: #999699,
+        redline: #FF4646
+);
